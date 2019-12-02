@@ -1,5 +1,5 @@
 #%%
-import torchhttps://stackoverflow.com/questions/33263491/how-do-i-connect-to-my-existing-git-repo-using-visual-studio-code
+import torch
 torch.__version__
 torch.cuda.is_available()
 #%%
