@@ -2,7 +2,6 @@
 import torch
 torch.__version__
 torch.cuda.is_available()
-print('Hola')
 #%%
 # lots of ways to create a tensor 
 # https://pytorch.org/docs/stable/torch.html#creation-ops
