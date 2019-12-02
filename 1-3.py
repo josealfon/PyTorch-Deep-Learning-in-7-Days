@@ -2,6 +2,7 @@
 import torch
 torch.__version__
 torch.cuda.is_available()
+print('Hola')https://stackoverflow.com/questions/33263491/how-do-i-connect-to-my-existing-git-repo-using-visual-studio-code
 #%%
 # lots of ways to create a tensor 
 # https://pytorch.org/docs/stable/torch.html#creation-ops
