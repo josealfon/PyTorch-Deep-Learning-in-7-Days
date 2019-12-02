@@ -13,6 +13,7 @@ import numpy as np
 import torchvision
 mnist = torchvision.datasets.MNIST('./var', download=True)
 mnist[0][0]
+torchvision.__version__
 
 #%%
 # looks like a squiggly 5 -- let's check the label
@@ -25,9 +26,13 @@ mnist[0][1]
 #%%
 import torchvision.transforms as transforms
 
+#transform = transforms.Compose(
+#    [transforms.ToTensor(),
+#     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 transform = transforms.Compose(
     [transforms.ToTensor(),
-     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+    transforms.Normalize((0.5,), (0.5,))
+])
 
 train = torchvision.datasets.MNIST('./var', train=True, transform=transform)
 trainloader = torch.utils.data.DataLoader(train, batch_size=32, shuffle=True)
@@ -108,3 +113,5 @@ for inputs, actual in testloader:
     print(accuracy)
 
 print(sklearn.metrics.classification_report(actual, results))
+
+# %%
